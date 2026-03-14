@@ -1,23 +1,16 @@
 
-TI-One Logistic Regression → COS Upload
+TI-One Logistic Regression → COS Upload (Environment Variables)
 
-1. Replace credentials in train.py
-
-SECRET_ID = "YOUR_SECRET_ID_HERE"
-SECRET_KEY = "YOUR_SECRET_KEY_HERE"
-
-Get them from:
-Tencent Cloud → CAM → API Keys
-
-2. Startup command
+1. Startup command example:
 
 cd /workspace
+export COS_SECRET_ID=AKIDxxxxxxxxxxxx
+export COS_SECRET_KEY=xxxxxxxxxxxxxxxx
+
 /usr/local/python3/bin/python3 -m pip install -r requirements.txt
 /usr/local/python3/bin/python3 train.py
 
-3. After training
+2. After training the model will upload to:
 
-Model will upload to:
-
-COS bucket
+COS bucket:
 lr-1327752399/models/lr_model.pkl
